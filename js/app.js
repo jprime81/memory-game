@@ -1,3 +1,4 @@
+// Initialize an array object as card deck
 const cardDeck = [
      {
          'name': 'bear',
@@ -33,16 +34,22 @@ const cardDeck = [
      },
  ];
 
+// Assign select DOM methods to variables and create DOM element and attributes
 const game = document.getElementById('game');
 const grid = document.createElement('section');
 grid.setAttribute('class', 'grid');
 game.appendChild(grid);
+
+// Duplicate card deck and assign as gameDeck variable
 const gameDeck = cardDeck.concat(cardDeck);
 
+// @description shuffles game deck array
+// @returns shuffled game deck array
 gameDeck.sort(function () {
     return 0.5 - Math.random();
 });
 
+// Loop over the gameDeck array object, create DOM elements, and assign dataset and class to the objects inside
 gameDeck.forEach(function (item) {
 
     const name = item.name;
