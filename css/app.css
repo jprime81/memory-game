@@ -46,6 +46,11 @@ h5 {
     transform-style: preserve-3d;
 }
 
+.picked {
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+}
+
 .card,
 .back,
 .front {
@@ -65,6 +70,10 @@ h5 {
     background: rgba(255, 255, 255, 0.1) url('../img/popsicle.png') no-repeat center center / contain;
 }
 
+.match {
+    pointer-events: none;
+}
+
 .back {
     -webkit-transform: rotateX(180deg);
     transform: rotateX(180deg);
@@ -76,4 +85,33 @@ h5 {
 
 .match .front {
     background: #7e96c4 !important;
+}
+
+.center-content {
+    display: block;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+}
+
+.moves {
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: inherit;
+}
+
+.btn-restart {
+    background: cadetblue;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #333;
+    border-radius: 20px;
+    border: none;
+    padding: 15px;
+    transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+    cursor: pointer;
+}
+
+.btn-restart:hover {
+    background: rgba(255, 255, 255, 0.1);
 }

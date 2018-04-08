@@ -70,3 +70,82 @@ gameDeck.forEach(function (item) {
     card.appendChild(front);
     card.appendChild(back);
 });
+
+let matchPairs = 0;
+
+const match = function () {
+
+    const picked = document.querySelectorAll('.picked');
+    picked.forEach(function (card) {
+        card.classList.add('match');
+    });
+
+    matchPairs++;
+    console.log('match:' + matchPairs);
+
+    if (matchPairs === 8) {
+        stopTimer();
+        console.log('Game over');
+        console.log('Total moves: ' + moves);
+        console.log('Total time: ' + hours + ' : ' + minutes + ' : ' + seconds);
+        setTimeout(gameOver, 1000);
+    }
+};
+
+let firstAttempt = '';
+let secondAttempt = '';
+let countAttempt = 0;
+let previousTarget = null;
+let delay = 1000;
+
+const resetAttempts = function () {
+    firstAttempt = '';
+    secondAttempt = '';
+    countAttempt = 0;
+    previousTarget = null;
+
+    var picked = document.querySelectorAll('.picked');
+
+    picked.forEach(function (card) {
+        card.classList.remove('picked');
+    });
+}
+
+grid.addEventListener('click', function (event) {
+
+    const clicked = event.target;
+
+    if (
+        clicked.nodeName === 'SECTION' ||
+        clicked === previousTarget ||
+        clicked.parentNode.classList.contains('picked')
+    ) {
+        return;
+    }
+
+    if (countAttempt < 2) {
+        countAttempt++;
+        if (countAttempt === 1) {
+            firstAttempt = clicked.parentNode.dataset.name;
+            console.log(firstAttempt);
+            clicked.parentNode.classList.add('picked');
+
+        } else {
+            secondAttempt = clicked.parentNode.dataset.name;
+            console.log(secondAttempt);
+            clicked.parentNode.classList.add('picked');
+        }
+
+        if (firstAttempt && secondAttempt) {
+            if (firstAttempt === secondAttempt) {
+                setTimeout(match, delay);
+            }
+            setTimeout(resetAttempts, delay);
+        }
+        previousTarget = clicked;
+    }
+});
+
+function resetGame() {
+    location.reload(false);
+}
