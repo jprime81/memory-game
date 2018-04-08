@@ -71,8 +71,10 @@ gameDeck.forEach(function (item) {
     card.appendChild(back);
 });
 
+// Initialize matchPairs
 let matchPairs = 0;
 
+// @description match is called when picked cards match, then increments the value of matchPairs until actual number of pairs is reached
 const match = function () {
 
     const picked = document.querySelectorAll('.picked');
@@ -92,12 +94,14 @@ const match = function () {
     }
 };
 
+// Initialize attemps values, previous clicked card (target), delay time in milliseconds
 let firstAttempt = '';
 let secondAttempt = '';
 let countAttempt = 0;
 let previousTarget = null;
-let delay = 1000;
+let delay = 500;
 
+// @description rest attemps is called when picked cards do not match.
 const resetAttempts = function () {
     firstAttempt = '';
     secondAttempt = '';
@@ -111,6 +115,7 @@ const resetAttempts = function () {
     });
 }
 
+// @description click function listens for picked cards, then increments attempt values
 grid.addEventListener('click', function (event) {
 
     const clicked = event.target;
@@ -146,6 +151,7 @@ grid.addEventListener('click', function (event) {
     }
 });
 
+// @description reloads the page when called
 function resetGame() {
     location.reload(false);
 }
