@@ -6,8 +6,9 @@
 }
 
 body {
-    margin: 20px 0;
+    margin: 2px 0;
     background: #7e96c4 !important;
+    color: #333;
     font-family: 'Open Sans', Helvetica, Arial, sans-serif;
     line-height: 1.5;
     text-rendering: optimizeLegibility;
@@ -101,9 +102,9 @@ h5 {
 }
 
 .btn-restart {
-    background: cadetblue;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 14px;
+    background: #c47e96;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
+    font-size: 15px;
     color: #333;
     border-radius: 20px;
     border: none;
@@ -114,4 +115,23 @@ h5 {
 
 .btn-restart:hover {
     background: rgba(255, 255, 255, 0.1);
+    color: #fff;
 }
+
+.stars {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+    margin: 0 10px 0 0;
+    text-align: center;
+}
+
+.stars li {
+    display: inline-block;
+    list-style: none;
+}
+
+.fa-star {
+    color: coral;
+}
+

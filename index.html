@@ -23,8 +23,32 @@
             Memory Game
         </h1>
 
+        <h2>
+            Moves <span class="moves">0</span>
+        </h2>
+
         <div class="center-content">
-            <button class="btn bnt-default" onclick="resetGame()">Reset Game</button>
+            <ul class="stars">
+                <li>
+                    <i class="fa fa-star fa-lg"></i>
+                </li>
+                <li>
+                    <i class="fa fa-star fa-lg"></i>
+                </li>
+                <li>
+                    <i class="fa fa-star fa-lg"></i>
+                </li>
+            </ul>
+        </div>
+
+        <div class="center-content">
+            <h3>
+                <time>00:00:00</time>
+            </h3>
+        </div>
+
+        <div class="center-content">
+            <button class="btn bnt-default btn-restart" onclick="resetGame()">Restart Game</button>
         </div>
 
         <div id="game"></div>
