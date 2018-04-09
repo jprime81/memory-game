@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="game-container">
         <h1>
             Memory Game
         </h1>
@@ -53,8 +53,32 @@
 
         <div id="game"></div>
 
+        <div id="popup-modal" class="overlay">
+            <div class="popup">
+                <h1>Game Over!</h2>
+                    <br>
+                    <div>
+                        <h2>
+                            You beat the game in <span id="total-moves"></span> moves
+                        </h2>
+                        <br>
+                        <h2>
+                            Your total time is
+                            <span id="total-hours"></span>:<span id="total-minutes"></span>:<span id="total-seconds"></span>
+                        </h2>
+                        <br>
+                        <h2>
+                            Your rating is
+                            <span id="total-rating" class="total-rating"></span>
+                        </h2>
+                    </div>
+                    <br>
+                    <div>
+                        <button class="btn bnt-default btn-restart" onclick="resetGame()">Restart Game</button>
+                    </div>
+            </div>
+        </div>
     </div>
-
 
     <script src="js/app.js"></script>
 </body>

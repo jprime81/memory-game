@@ -23,6 +23,31 @@ h5 {
     font-family: 'Fira sans', Helvetica, Arial, sans-serif;
 }
 
+.game-container {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 768px) {
+    .game-container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .game-container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .game-container {
+        width: 1170px;
+    }
+}
+
 .grid {
     max-width: 600px;
     margin: 0 auto;
@@ -114,8 +139,8 @@ h5 {
 }
 
 .btn-restart:hover {
-    background: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    background: #d5a4b5;
+    color: #111;
 }
 
 .stars {
@@ -132,6 +157,52 @@ h5 {
 }
 
 .fa-star {
-    color: coral;
+    color: #ff7f50;
+}
+
+.popup {
+    margin: 50px auto;
+    padding: 70px;
+    background: #f2f2f2;
+    border-radius: 8px;
+    width: 80%;
+    height: 80%;
+    position: relative;
+    font-family: 'Fira sans', Helvetica, Arial, sans-serif;
+    text-align: center;
+}
+
+.popup h2 {
+    margin-top: 0;
+    color: #333;
+    font-family: Tahoma, Arial, sans-serif;
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.overlay:target {
+    visibility: visible;
+    opacity: 1;
+}
+
+.show {
+    visibility: visible !important;
+    opacity: 100 !important;
+}
+
+.total-rating li {
+    display: inline-block;
+    list-style: none;
+    margin: 0 10px 0 0;
 }
 
