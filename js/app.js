@@ -1,3 +1,5 @@
+// Game logic is inspired from this blog post: https://www.taniarascia.com/how-to-create-a-memory-game-super-mario-with-plain-javascript/
+
 // Initialize card deck as array object
 const cardDeck = [
      {
