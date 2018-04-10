@@ -1,4 +1,5 @@
-// Game logic is inspired from this blog post: https://www.taniarascia.com/how-to-create-a-memory-game-super-mario-with-plain-javascript/
+// Game logic is based from this blog post: https://www.taniarascia.com/how-to-create-a-memory-game-super-mario-with-plain-javascript/
+// Move counter, rating system, and modal are based from this blog post: https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript/
 
 // Initialize card deck as array object
 const cardDeck = [
