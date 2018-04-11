@@ -35,4 +35,6 @@ This game was built using HTML, JavaScript, and CSS.
 
 - the move counter fires up the timer once the first move (two clicks) is registered
 
+- the star rating fires up when the allowed unmatched pair (move) threshold is met
+
 - when all of the cards are matched, a pop-up modal window is shown revealing the number of moves made, the time spent, and the star rating
