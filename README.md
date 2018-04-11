@@ -9,7 +9,7 @@ This game will put your memory to the test.
 <hr>
 
 ## Goal
-The goal of the game is to match the cards in as few moves as possible.
+The goal of the game is to match all the cards in as few moves as possible.
 
 ## Try it
 
@@ -19,17 +19,17 @@ The goal of the game is to match the cards in as few moves as possible.
 
 - Click a card to reveal what's behind it
 
-- Clik another card to match what has been already revealed
+- Click another card to match what has been already revealed
 
-- Once the cards are match, both will disappear
+- When the cards are matched, both will disappear
 
 - Finish the game by matching all the remaining cards
 
 ## How this game was built
 
-This game was built using HTML, JavaScript, and CSS.
+This game was created using HTML, JavaScript, and CSS.
 
-- card deck is initialize as an array, then the cards are randomized using sort() and Math.random() methods
+- card deck is initialized as an array, then the cards are randomized using sort() and Math.random() methods
 
 - clicks are tracked using an event listener, which then fires up the move counter
 
@@ -47,17 +47,17 @@ The main (3) components of this game are the following:
 
     - `index.hmtl`
 
-- JavaScript file contains the game logic
+- JavaScript file controls the game logic
 
     - `js/app.js`
 
-- CSS file contains the page's format and styling
+- CSS file defines page format and styling
 
     - `css/app.css`
 
 Besides HTML, JS, and CSS, this project also requires the following:
 
-- Google Fonts for fonts styles
+- Google Fonts for the font styling
 
     - Open Sans `<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">`
     - Fira Sans `<link href="https://fonts.googleapis.com/css?family=Fira+Sans" rel="stylesheet">`
@@ -66,10 +66,12 @@ Besides HTML, JS, and CSS, this project also requires the following:
 
     - 3.3.7 (minified) `<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">`
 
-- Fontawesome for star icon
+- Fontawesome for the star icon
 
     - 4.6.1 (minified) `<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet">`
 
 - Flaticon for card deck icons
 
     - Spring `https://www.flaticon.com/packs/spring-31`
+
+    - `img/*.png`
